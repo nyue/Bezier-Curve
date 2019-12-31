@@ -4,7 +4,7 @@
 #include "bezierCurve.h"
 #include "bezierSurface.h"
 #include "bezierFile.h"
-#include <GL\glut.h>
+#include <GL/glut.h>
 using namespace std;
 
 #define PI 3.1415926535898

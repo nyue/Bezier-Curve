@@ -15,7 +15,7 @@ bezier *readBezierFile(char *filename)
 		fin.getline(s, LINE_LENGTH);
 		int uPoints;
 		int vPoints;
-		sscanf_s(s, "%d %d", &uPoints, &vPoints);
+		sscanf(s, "%d %d", &uPoints, &vPoints);
 		int i = 0;
 		int length = vPoints>0 ? (uPoints+1)*(vPoints+1) : uPoints+1;
 		float **points = new float*[uPoints + 1];
@@ -23,7 +23,7 @@ bezier *readBezierFile(char *filename)
 		while(fin.getline(s, LINE_LENGTH)){
 			float *point = new float[3];
 			if (s[0] == '#') continue; //comment line
-			sscanf_s(s, "%f %f %f", &point[0], &point[1], &point[2]);
+			sscanf(s, "%f %f %f", &point[0], &point[1], &point[2]);
 		//	std::cout<<point[0]<<','<<point[1]<<','<<point[2]<<endl;
 			points[i++] = point;
 		}

@@ -2,7 +2,7 @@
 #include <math.h>
 #include "bezierCurve.h"
 #include "bezierMath.h"
-#include <GL\glut.h>
+#include <GL/glut.h>
 #define ALGORITHM 0
 using namespace std;
 

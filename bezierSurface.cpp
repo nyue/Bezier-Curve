@@ -2,7 +2,7 @@
 #include <math.h>
 #include "bezierSurface.h"
 #include "bezierMath.h"
-#include <GL\glut.h>
+#include <GL/glut.h>
 #define ALGORITHM 0
 
 bezierSurface::bezierSurface(int uPoints, int vPoints, float **points[3]):bezier(){

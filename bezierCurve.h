@@ -7,10 +7,10 @@ private:
 	int numPoints;
 	float **controlPoints;
 	float **curvePoints;
-	void bezierCurve::calCurve();
+	void calCurve();
 public:
 	bezierCurve(int numPoints, float *points[3]);
-	void bezierCurve::setShowPoints(bool showControlPoints);
+	void setShowPoints(bool showControlPoints);
 	virtual void draw();
     ~bezierCurve();
 };

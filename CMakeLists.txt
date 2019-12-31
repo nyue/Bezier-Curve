@@ -1,0 +1,30 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.16)
+
+PROJECT ( BezierDemo )
+
+FIND_PACKAGE ( OpenGL REQUIRED )
+FIND_PACKAGE ( GLUT REQUIRED )
+
+INCLUDE_DIRECTORIES (
+  ${GLUT_INCLUDE_DIR}
+  ${OPENGL_GLX_INCLUDE_DIR}
+  ${OPENGL_INCLUDE_DIR}
+  )
+
+ADD_EXECUTABLE ( surfaceDemo
+  bezierCurve.cpp
+  bezierFile.cpp
+  bezierMath.cpp
+  bezierSurface.cpp
+  main.cpp
+  )
+
+TARGET_LINK_LIBRARIES ( surfaceDemo
+  ${GLUT_Xi_LIBRARY}
+  ${GLUT_Xmu_LIBRARY}
+  ${GLUT_glut_LIBRARY}
+  ${OPENGL_egl_LIBRAR}
+  ${OPENGL_glu_LIBRARY}
+  ${OPENGL_glx_LIBRARY}
+  ${OPENGL_opengl_LIBRARY}
+  )
